@@ -3,7 +3,7 @@
 
 ListNode* Solution::rotateRight(ListNode* head, int k)
 {
-    if(!head){ return head; }  // handle the empty list case
+    if(!head || !head->next){ return head; }  // handle the empty list / single node cases
 
     ListNode* follower{head}, * leader{head};
     for(int j{0}; j<k; ++j)
